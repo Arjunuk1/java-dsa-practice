@@ -1,0 +1,23 @@
+public class removealladjacentduplicateinstring {
+        public String removeDuplicates(String s) {
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < s.length(); i++) {
+
+            char ch = s.charAt(i);
+
+            if (result.length() > 0 &&
+                result.charAt(result.length() - 1) == ch) {
+
+                result.deleteCharAt(result.length() - 1);
+
+            } else {
+
+                result.append(ch);
+            }
+        }
+
+        return result.toString();
+    }
+}
