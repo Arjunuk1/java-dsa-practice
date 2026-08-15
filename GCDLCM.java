@@ -18,7 +18,9 @@ public class GCDLCM {
         int lcm = (a * b) / gcd;
 
         System.out.println(gcd);
+        
         System.out.println(lcm);
+
 
     }
 }
