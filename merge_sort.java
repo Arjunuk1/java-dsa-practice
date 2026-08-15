@@ -32,7 +32,7 @@ public class merge_sort
         }
         
         for(int i=s;i<=e;i++){
-            arr[i] = ll.get(i-s);//s=4, i=4,5,6,7 //ll=> 0 1 2 3
+            arr[i] = ll.get(i-s);
         }
     } 
     public static void mergeSort(int arr[], int s, int e){
