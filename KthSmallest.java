@@ -15,6 +15,7 @@ public class KthSmallest {
 
         Arrays.sort(arr);
 
-        System.out.println(k + "th Smallest = " + arr[k-1]);
+        System.out.println(k + "th Smallest = " +  arr[k-1]);
+
     }
 }
