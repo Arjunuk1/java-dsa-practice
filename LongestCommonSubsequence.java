@@ -1,34 +1,28 @@
-import java.util.Arrays;
-
 public class LongestCommonSubsequence {
-        private int f(int i, int j, String text1, String text2, int[][] dp) {
-        if (i < 0 || j < 0) {
+    public int longestCommonSubsequence(String text1, String text2) {
+        if (text1.isEmpty() || text2.isEmpty()) {
             return 0;
         }
 
-        if (dp[i][j] != -1) {
-            return dp[i][j];
+        if (text1.length() < text2.length()) {
+            String shorter = text1;
+            text1 = text2;
+            text2 = shorter;
         }
 
-        if (text1.charAt(i) == text2.charAt(j)) {
-            return dp[i][j] = 1 + f(i - 1, j - 1, text1, text2, dp);
+        int[] previous = new int[text2.length() + 1];
+        for (int i = 1; i <= text1.length(); i++) {
+            int[] current = new int[text2.length() + 1];
+            for (int j = 1; j <= text2.length(); j++) {
+                if (text1.charAt(i - 1) == text2.charAt(j - 1)) {
+                    current[j] = previous[j - 1] + 1;
+                } else {
+                    current[j] = Math.max(previous[j], current[j - 1]);
+                }
+            }
+            previous = current;
         }
 
-        return dp[i][j] = Math.max(
-            f(i - 1, j, text1, text2, dp),
-            f(i, j - 1, text1, text2, dp)
-        );
-    }
-
-    public int longestCommonSubsequence(String text1, String text2) {
-        int m = text1.length();
-        int n = text2.length();
-        int[][] dp = new int[m][n];
-
-        for (int i = 0; i < m; i++) {
-            Arrays.fill(dp[i], -1);
-        }
-
-        return f(m - 1, n - 1, text1, text2, dp);
+        return previous[text2.length()];
     }
 }
