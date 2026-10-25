@@ -1,21 +1,18 @@
 public class UniquePaths {
     public int uniquePaths(int m, int n) {
-        int[][] dp = new int[m][n];
+        if (m <= 0 || n <= 0) {
+            return 0;
+        }
+
+        int[] dp = new int[n];
+        dp[0] = 1;
 
         for (int row = 0; row < m; row++) {
-            dp[row][0] = 1;
-        }
-
-        for (int column = 0; column < n; column++) {
-            dp[0][column] = 1;
-        }
-
-        for (int row = 1; row < m; row++) {
             for (int column = 1; column < n; column++) {
-                dp[row][column] = dp[row - 1][column] + dp[row][column - 1];
+                dp[column] += dp[column - 1];
             }
         }
 
-        return dp[m - 1][n - 1];
+        return dp[n - 1];
     }
 }
