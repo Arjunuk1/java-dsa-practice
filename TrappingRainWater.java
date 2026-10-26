@@ -1,6 +1,6 @@
 public class TrappingRainWater {
     public int trap(int[] height) {
-        if (height.length < 3) {
+        if (height == null || height.length < 3) {
             return 0;
         }
 
