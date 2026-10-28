@@ -13,7 +13,7 @@ public class ReverseWords {
     }
 
     public static String reverseWords(String str) {
-        if (str.isEmpty()) {
+        if (str == null || str.isEmpty()) {
             return "";
         }
 
