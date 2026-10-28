@@ -10,6 +10,11 @@ public class PerfectNumber {
 
         int n = sc.nextInt();
 
+        if (n <= 1) {
+            System.out.println("Not Perfect Number");
+            return;
+        }
+
         int sum = 0;
 
         for(int i = 1;i<n;i++){
