@@ -24,6 +24,13 @@ public class zeroOneKnapsackProblem {
     }
 
     public int knapsack(int W, int val[], int wt[]) {
+        if (W <= 0 || val == null || wt == null || val.length == 0) {
+            return 0;
+        }
+        if (val.length != wt.length) {
+            throw new IllegalArgumentException("Values and weights must have the same length");
+        }
+
         int n = val.length;
         int[][] dp = new int[n][W + 1];
 
