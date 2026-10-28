@@ -1,6 +1,10 @@
 public class LongestPrefixSuffix {
         public int getLPSLength(String s) {
-        int n = s.length();
+            if (s == null || s.isEmpty()) {
+                return 0;
+            }
+
+            int n = s.length();
         int[] lps = new int[n];
         int len = 0;
         int i = 1;
