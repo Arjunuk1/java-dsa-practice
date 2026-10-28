@@ -2,6 +2,10 @@ import java.util.Arrays;
 
 public class HouseRobber {
         public int rob(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+
         int n = nums.length;
         int dp[] = new int[n];
         Arrays.fill(dp, -1);
