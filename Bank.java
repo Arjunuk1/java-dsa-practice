@@ -14,13 +14,14 @@ public class Bank {
 
         double amount = scn.nextDouble();
 
-        try{
-            if(amount > balance)
+        try {
+            if (amount > balance) {
                 throw new InsufficientBalanceException("Insufficient balance");
-                balance -= amount;
-                System.out.println("Remaining Balance = " + balance);
-            }catch(Exception e){
-                System.out.println(e.getMessage());
+            }
+            balance -= amount;
+            System.out.println("Remaining Balance = " + balance);
+        } catch (InsufficientBalanceException e) {
+            System.out.println(e.getMessage());
         }
     }
 }
