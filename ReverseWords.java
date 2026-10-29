@@ -2,9 +2,10 @@ import java.util.Scanner;
 
 public class ReverseWords {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        String str = scn.hasNextLine() ? scn.nextLine().trim() : "";
-        scn.close();
+        String str;
+        try (Scanner scn = new Scanner(System.in)) {
+            str = scn.hasNextLine() ? scn.nextLine().trim() : "";
+        }
 
         String reversed = reverseWords(str);
         if (!reversed.isEmpty()) {
