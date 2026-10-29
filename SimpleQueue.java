@@ -10,7 +10,7 @@ public class SimpleQueue {
     }
 
     public void enqueue(int data){
-        if(front == size - 1){
+        if(rear == size - 1){
             System.out.println("Queue is Full");
             return;
         }
