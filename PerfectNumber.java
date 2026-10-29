@@ -23,9 +23,10 @@ public class PerfectNumber {
             }
         }
 
-        if (sum == n)
+        if (sum == n) {
             System.out.println("Perfect Number");
-        else
+        } else {
             System.out.println("Not Perfect Number");
+        }
     }
 }
