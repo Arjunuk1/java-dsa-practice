@@ -1,2 +1,9 @@
 # DSA DAILY PRACTICE
-problems solved from many platforms such as leetcode, gfg and neetcode with optimal solutions and brute force too.
+Problems solved from platforms such as LeetCode, GFG, and NeetCode.
+
+Each Java file can be compiled and run independently:
+
+```bash
+javac PerfectNumber.java
+java PerfectNumber
+```
