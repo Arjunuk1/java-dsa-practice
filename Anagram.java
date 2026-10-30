@@ -11,10 +11,11 @@ public class Anagram {
             System.out.print("Second String: ");
             String s2 = sc.nextLine();
 
-            if (isAnagram(s1, s2))
+            if (isAnagram(s1, s2)) {
                 System.out.println("Anagram");
-            else
+            } else {
                 System.out.println("Not Anagram");
+            }
         }
     }
 
