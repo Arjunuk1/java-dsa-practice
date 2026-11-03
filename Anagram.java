@@ -23,6 +23,10 @@ public class Anagram {
         char[] a = first.toLowerCase(Locale.ROOT).toCharArray();
         char[] b = second.toLowerCase(Locale.ROOT).toCharArray();
 
+        if (a.length != b.length) {
+            return false;
+        }
+
         Arrays.sort(a);
         Arrays.sort(b);
 
