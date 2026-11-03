@@ -14,7 +14,7 @@ public class ReverseWords {
     }
 
     public static String reverseWords(String str) {
-        if (str == null || str.isEmpty()) {
+        if (str == null || str.isBlank()) {
             return "";
         }
 
