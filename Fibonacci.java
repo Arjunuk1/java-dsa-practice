@@ -3,9 +3,14 @@ public class Fibonacci {
         if (n < 0) {
             throw new IllegalArgumentException("n must be non-negative");
         }
-        if(n==0) return 0;
-        if(n==1) return 1;
-        return fibo(n-1) + fibo(n-2);
+        int previous = 0;
+        int current = 1;
+        for (int i = 0; i < n; i++) {
+            int next = previous + current;
+            previous = current;
+            current = next;
+        }
+        return previous;
     }
 
     public static void main(String[] args) {
