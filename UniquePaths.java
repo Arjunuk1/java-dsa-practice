@@ -7,15 +7,17 @@ public class UniquePaths {
             return 1;
         }
 
-        int[] dp = new int[n];
+        int rows = Math.max(m, n);
+        int columns = Math.min(m, n);
+        int[] dp = new int[columns];
         dp[0] = 1;
 
-        for (int row = 0; row < m; row++) {
-            for (int column = 1; column < n; column++) {
+        for (int row = 0; row < rows; row++) {
+            for (int column = 1; column < columns; column++) {
                 dp[column] += dp[column - 1];
             }
         }
 
-        return dp[n - 1];
+        return dp[columns - 1];
     }
 }
