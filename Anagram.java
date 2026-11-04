@@ -20,8 +20,8 @@ public class Anagram {
     }
 
     public static boolean isAnagram(String first, String second) {
-        char[] a = first.toLowerCase(Locale.ROOT).toCharArray();
-        char[] b = second.toLowerCase(Locale.ROOT).toCharArray();
+        char[] a = normalize(first).toCharArray();
+        char[] b = normalize(second).toCharArray();
 
         if (a.length != b.length) {
             return false;
@@ -31,5 +31,9 @@ public class Anagram {
         Arrays.sort(b);
 
         return Arrays.equals(a, b);
+    }
+
+    private static String normalize(String value) {
+        return value.replaceAll("\\s+", "").toLowerCase(Locale.ROOT);
     }
 }
