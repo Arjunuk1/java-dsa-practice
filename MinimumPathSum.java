@@ -2,7 +2,10 @@ import java.util.Arrays;
 
 public class MinimumPathSum {
         public int minPathSum(int[][] grid) {
-        int m = grid.length, n = grid[0].length;
+            if (grid == null || grid.length == 0 || grid[0] == null || grid[0].length == 0) {
+                throw new IllegalArgumentException("Grid must not be empty");
+            }
+            int m = grid.length, n = grid[0].length;
         int dp[][] = new int[m][n];
         for(int i = 0;i<m;i++){
             Arrays.fill(dp[i], -1);
