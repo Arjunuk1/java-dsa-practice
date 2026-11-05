@@ -6,7 +6,7 @@ public class RemoveDuplicateCharacters {
         
         Scanner scn = new Scanner(System.in);
 
-        String str = scn.nextLine();
+        String str = scn.hasNextLine() ? scn.nextLine() : "";
 
         LinkedHashSet<Character> set = new LinkedHashSet<>();
 
