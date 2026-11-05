@@ -9,6 +9,10 @@ public class SecondLargest {
             set.add(num);
         }
 
+        if (set.size() < 2) {
+            throw new IllegalArgumentException("At least two distinct numbers are required");
+        }
+
         int arr2[] = new int[set.size()];
         int i = 0;
 
