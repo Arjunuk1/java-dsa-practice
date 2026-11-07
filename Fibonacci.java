@@ -1,5 +1,5 @@
 public class Fibonacci {
-    public int fibo(int n){
+    public int fibo(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("n must be non-negative");
         }
@@ -17,7 +17,7 @@ public class Fibonacci {
         Fibonacci fibonacci = new Fibonacci();
         int n = 10;
         System.out.println("Fibo sequence is: ");
-        for(int i = 0;i<n;i++){
+        for (int i = 0; i < n; i++) {
             System.out.println("F(" + i + ") = " + fibonacci.fibo(i));
         }
     }
