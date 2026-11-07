@@ -20,6 +20,10 @@ public class Anagram {
     }
 
     public static boolean isAnagram(String first, String second) {
+        if (first == null || second == null) {
+            return false;
+        }
+
         char[] a = normalize(first).toCharArray();
         char[] b = normalize(second).toCharArray();
 
