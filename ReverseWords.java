@@ -19,7 +19,7 @@ public class ReverseWords {
         }
 
         String[] words = str.split("\\s+");
-        StringBuilder reversed = new StringBuilder();
+        StringBuilder reversed = new StringBuilder(str.length());
         for (int i = words.length - 1; i >= 0; i--) {
             if (i < words.length - 1) {
                 reversed.append(" ");
