@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class HouseRobber {
-        public int rob(int[] nums) {
+    public int rob(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
         }
@@ -14,7 +14,8 @@ public class HouseRobber {
         Arrays.fill(dp, -1);
         return F(n-1, dp, nums);
     }
-    public int F(int ind, int[] dp, int[] nums){
+
+    public int F(int ind, int[] dp, int[] nums) {
         if (ind == 0) {
             return nums[0];
         }
