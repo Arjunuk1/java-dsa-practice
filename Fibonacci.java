@@ -16,7 +16,7 @@ public class Fibonacci {
     public static void main(String[] args) {
         Fibonacci fibonacci = new Fibonacci();
         int n = 10;
-        System.out.println("Fibo sequence is: ");
+        System.out.println("Fibonacci sequence is: ");
         for (int i = 0; i < n; i++) {
             System.out.println("F(" + i + ") = " + fibonacci.fibo(i));
         }
