@@ -12,7 +12,7 @@ public class UniquePaths {
         int[] dp = new int[columns];
         dp[0] = 1;
 
-        for (int row = 0; row < rows; row++) {
+        for (int row = 1; row < rows; row++) {
             for (int column = 1; column < columns; column++) {
                 dp[column] += dp[column - 1];
             }
