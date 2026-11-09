@@ -6,7 +6,7 @@ public class Fibonacci {
         int previous = 0;
         int current = 1;
         for (int i = 0; i < n; i++) {
-            int next = previous + current;
+            final int next = previous + current;
             previous = current;
             current = next;
         }
