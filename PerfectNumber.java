@@ -25,9 +25,10 @@ public class PerfectNumber {
         long sum = 1;
         for (int i = 2; i <= n / i; i++) {
             if (n % i == 0) {
+                int pairedDivisor = n / i;
                 sum += i;
-                if (i != n / i) {
-                    sum += n / i;
+                if (i != pairedDivisor) {
+                    sum += pairedDivisor;
                 }
             }
         }
