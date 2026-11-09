@@ -24,8 +24,8 @@ public class Anagram {
             return false;
         }
 
-        char[] a = normalize(first).toCharArray();
-        char[] b = normalize(second).toCharArray();
+        final char[] a = normalize(first).toCharArray();
+        final char[] b = normalize(second).toCharArray();
 
         if (a.length != b.length) {
             return false;
