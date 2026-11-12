@@ -6,10 +6,10 @@ public class Anagram {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.print("First String: ");
-            String s1 = sc.nextLine();
+            final String s1 = sc.nextLine();
 
             System.out.print("Second String: ");
-            String s2 = sc.nextLine();
+            final String s2 = sc.nextLine();
 
             if (isAnagram(s1, s2)) {
                 System.out.println("Anagram");
