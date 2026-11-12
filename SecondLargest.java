@@ -14,7 +14,7 @@ public class SecondLargest {
             throw new IllegalArgumentException("At least two distinct numbers are required");
         }
 
-        int arr2[] = new int[set.size()];
+        final int[] arr2 = new int[set.size()];
         int i = 0;
 
         for(int num : set){
