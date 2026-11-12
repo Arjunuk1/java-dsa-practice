@@ -17,6 +17,7 @@ public class PerfectNumber {
         }
     }
 
+    // A perfect number equals the sum of its positive divisors excluding itself.
     public static boolean isPerfectNumber(int n) {
         if (n <= 1) {
             return false;
