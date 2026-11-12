@@ -7,7 +7,7 @@ public class ReverseWords {
             str = scn.hasNextLine() ? scn.nextLine().trim() : "";
         }
 
-        String reversed = reverseWords(str);
+        final String reversed = reverseWords(str);
         if (!reversed.isEmpty()) {
             System.out.println(reversed);
         }
