@@ -15,7 +15,7 @@ public class HouseRobber {
         return F(n-1, dp, nums);
     }
 
-    public int F(int ind, int[] dp, int[] nums) {
+    private int F(int ind, int[] dp, int[] nums) {
         if (ind == 0) {
             return nums[0];
         }
