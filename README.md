@@ -9,3 +9,10 @@ java PerfectNumber
 ```
 
 Replace `PerfectNumber.java` with any solution file to try another problem.
+
+For example:
+
+```bash
+javac Fibonacci.java
+java Fibonacci
+```
