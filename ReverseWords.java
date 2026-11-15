@@ -13,6 +13,7 @@ public class ReverseWords {
         }
     }
 
+    /** Returns the words in reverse order while normalizing whitespace. */
     public static String reverseWords(String str) {
         if (str == null || str.isBlank()) {
             return "";
