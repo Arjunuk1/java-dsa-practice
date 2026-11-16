@@ -19,6 +19,7 @@ public class Anagram {
         }
     }
 
+    /** Compares two strings while ignoring whitespace and letter case. */
     public static boolean isAnagram(String first, String second) {
         if (first == null || second == null) {
             return false;
