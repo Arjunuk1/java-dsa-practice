@@ -1,5 +1,9 @@
 public class Fibonacci {
-    /** Returns the nth Fibonacci number, starting with fibo(0) = 0. */
+    /**
+     * Returns the nth Fibonacci number, starting with fibo(0) = 0.
+     *
+     * @throws IllegalArgumentException if n is negative
+     */
     public int fibo(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("n must be non-negative");
