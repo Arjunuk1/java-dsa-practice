@@ -16,3 +16,5 @@ For example:
 javac Fibonacci.java
 java Fibonacci
 ```
+
+Compiled `.class` files are ignored by Git, so they can be removed safely after practice.
