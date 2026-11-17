@@ -12,10 +12,10 @@ public class HouseRobber {
         int n = nums.length;
         int[] dp = new int[n];
         Arrays.fill(dp, -1);
-        return F(n-1, dp, nums);
+        return maxRobbed(n - 1, dp, nums);
     }
 
-    private int F(int ind, int[] dp, int[] nums) {
+    private int maxRobbed(int ind, int[] dp, int[] nums) {
         if (ind == 0) {
             return nums[0];
         }
@@ -25,8 +25,8 @@ public class HouseRobber {
         if (dp[ind] != -1) {
             return dp[ind];
         }
-        int tail = nums[ind] + F(ind - 2, dp, nums);
-        int nottail = F(ind - 1, dp, nums);
+        int tail = nums[ind] + maxRobbed(ind - 2, dp, nums);
+        int nottail = maxRobbed(ind - 1, dp, nums);
         return dp[ind] = Math.max(tail, nottail);
     }
 }
