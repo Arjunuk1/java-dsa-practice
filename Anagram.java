@@ -25,17 +25,17 @@ public class Anagram {
             return false;
         }
 
-        final char[] a = normalize(first).toCharArray();
-        final char[] b = normalize(second).toCharArray();
+        final char[] firstLetters = normalize(first).toCharArray();
+        final char[] secondLetters = normalize(second).toCharArray();
 
-        if (a.length != b.length) {
+        if (firstLetters.length != secondLetters.length) {
             return false;
         }
 
-        Arrays.sort(a);
-        Arrays.sort(b);
+        Arrays.sort(firstLetters);
+        Arrays.sort(secondLetters);
 
-        return Arrays.equals(a, b);
+        return Arrays.equals(firstLetters, secondLetters);
     }
 
     private static String normalize(String value) {
