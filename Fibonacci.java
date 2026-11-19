@@ -2,6 +2,8 @@ public class Fibonacci {
     /**
      * Returns the nth Fibonacci number, starting with fibo(0) = 0.
      *
+     * @param n zero-based position in the sequence
+     * @return the Fibonacci number at position n
      * @throws IllegalArgumentException if n is negative
      */
     public int fibo(int n) {
