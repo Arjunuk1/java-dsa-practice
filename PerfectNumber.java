@@ -20,6 +20,9 @@ public class PerfectNumber {
     /**
      * Checks whether a number equals the sum of its positive divisors excluding itself.
      * The value 1 is not perfect because it has no proper divisors.
+     *
+     * @param n number to check
+     * @return true when n is a perfect number
      */
     public static boolean isPerfectNumber(int n) {
         if (n <= 1) {
