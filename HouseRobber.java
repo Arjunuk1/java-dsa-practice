@@ -6,7 +6,7 @@ public class HouseRobber {
             return 0;
         }
         if (nums.length == 1) {
-            return nums[0];
+            return Math.max(0, nums[0]);
         }
 
         int n = nums.length;
