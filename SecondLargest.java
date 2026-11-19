@@ -2,9 +2,10 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 public class SecondLargest {
-    
-    static int secondlargestnumber(int arr[]){
-        HashSet<Integer> set = new HashSet<>();
+
+    /** Returns the second-largest distinct value in the input array. */
+    public static int secondLargestNumber(int[] arr) {
+        final HashSet<Integer> set = new HashSet<>();
         
         for(int num : arr){
             set.add(num);
