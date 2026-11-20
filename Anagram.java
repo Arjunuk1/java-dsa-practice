@@ -24,6 +24,9 @@ public class Anagram {
         if (first == null || second == null) {
             return false;
         }
+        if (first.equals(second)) {
+            return true;
+        }
 
         final char[] firstLetters = normalize(first).toCharArray();
         final char[] secondLetters = normalize(second).toCharArray();
