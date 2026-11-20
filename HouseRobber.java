@@ -17,7 +17,7 @@ public class HouseRobber {
 
     private int maxRobbed(int ind, int[] dp, int[] nums) {
         if (ind == 0) {
-            return nums[0];
+            return Math.max(0, nums[0]);
         }
         if (ind < 0) {
             return 0;
