@@ -3,10 +3,13 @@ import java.util.*;
 public class isPalindrome {
     
     public static boolean palindrome(LinkedList<Integer> list){
-        LinkedList<Integer> lst = new LinkedList<>();
+        if (list == null) {
+            return false;
+        }
 
-        while(lst.size() > 1){
-            if(!lst.pollFirst().equals(lst.pollLast())){
+        LinkedList<Integer> values = new LinkedList<>(list);
+        while(values.size() > 1){
+            if(!values.pollFirst().equals(values.pollLast())){
                 return false;
             }
         }
