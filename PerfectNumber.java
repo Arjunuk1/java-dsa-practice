@@ -37,6 +37,9 @@ public class PerfectNumber {
                 if (i != pairedDivisor) {
                     sum += pairedDivisor;
                 }
+                if (sum > n) {
+                    return false;
+                }
             }
         }
 
