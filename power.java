@@ -1,5 +1,8 @@
 public class power {
     int power(int base, int exp){
+        if(exp < 0){
+            throw new IllegalArgumentException("Exponent must be non-negative");
+        }
         if(exp == 0){
             return 1;
         }
