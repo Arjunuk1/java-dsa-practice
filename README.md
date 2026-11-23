@@ -18,3 +18,5 @@ java Fibonacci
 ```
 
 Compiled `.class` files are ignored by Git, so they can be removed safely after practice.
+
+Use `javac -d .` when compiling to keep generated classes organized by package.
