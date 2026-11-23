@@ -5,7 +5,7 @@ public class CountCharacters {
     public static void main(String[] args) {
         
         try (Scanner scn = new Scanner(System.in)) {
-            String str = scn.hasNextLine() ? scn.nextLine() : "";
+            final String str = scn.hasNextLine() ? scn.nextLine() : "";
 
             int vowels = 0, consonants = 0, digits = 0, special = 0;
 
