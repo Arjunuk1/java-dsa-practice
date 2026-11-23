@@ -23,7 +23,7 @@ public class Fibonacci {
     public static void main(String[] args) {
         final Fibonacci fibonacci = new Fibonacci();
         final int n = 10;
-        System.out.println("Fibonacci sequence is: ");
+        System.out.println("Fibonacci sequence:");
         for (int i = 0; i < n; i++) {
             System.out.println("F(" + i + ") = " + fibonacci.fibo(i));
         }
